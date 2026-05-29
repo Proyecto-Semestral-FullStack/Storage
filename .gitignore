@@ -31,3 +31,8 @@ build/
 
 ### VS Code ###
 .vscode/
+
+##credenciales Json
+**/frikitienda-storage-key.json
+**/storagekey.json
+**/frikitienda-storage-key.json.json
