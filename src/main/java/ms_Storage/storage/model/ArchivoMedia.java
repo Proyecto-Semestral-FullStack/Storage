@@ -1,7 +1,7 @@
 package ms_Storage.storage.model;
 
 import java.time.LocalDateTime;
-
+import org.hibernate.annotations.CreationTimestamp;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -24,9 +24,13 @@ public class ArchivoMedia {
     @Column(nullable = false)
     private Long tamanioBytes;
 
-    @Column(nullable = false)
+    @Column(nullable = true)
     private String urlPublica;
 
+    //Para evitar problema con Hibernte y el null
+    @CreationTimestamp
     @Column(nullable = false)
     private LocalDateTime subidoEn = LocalDateTime.now();
+
+
 }
