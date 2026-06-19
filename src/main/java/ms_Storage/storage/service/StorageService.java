@@ -47,8 +47,6 @@ public class StorageService {
                     .nombreAlmacenado(nombreAlmacenado)
                     .tipoMime(archivo.getContentType())
                     .tamanioBytes(archivo.getSize())
-                    // El campo urlPublica se deja como null (la columna debe permitir nulos)
-                    .urlPublica(null)
                     .build();
 
             ArchivoMedia guardado = repo.save(media);

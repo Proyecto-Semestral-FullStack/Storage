@@ -24,13 +24,5 @@ public class ArchivoMedia {
     @Column(nullable = false)
     private Long tamanioBytes;
 
-    @Column(nullable = true)
-    private String urlPublica;
-
-    //Para evitar problema con Hibernte y el null
-    @CreationTimestamp
-    @Column(nullable = false)
-    private LocalDateTime subidoEn = LocalDateTime.now();
-
 
 }

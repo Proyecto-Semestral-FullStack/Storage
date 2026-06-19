@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: ms-storage
+  datasource:
+    url: jdbc:mysql://localhost:3306/db_storage
+    username: root
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: update
+  cloud:
+    gcp:
+      credentials:
+        location: classpath:storagekey.json
+      project-id: storage-496403
+      storage:
+        bucket: frikitienda_img
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 10MB
+      max-request-size: 10MB
+
+server:
+  port: 8088
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
